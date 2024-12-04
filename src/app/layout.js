@@ -22,12 +22,15 @@ export default function RootLayout({ children }) {
   const isHomePage = pathname === '/';
   return (
     <html lang="en">
+      <head>
+        <title>KOA Studio</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {!isHomePage && <Navigation />}
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
