@@ -314,8 +314,8 @@ export default function Navigation() {
                             <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
                                 <div className="flex h-full space-x-8 ">
                                     {navigation.categories.map((category) => (
-                                        <Popover key={category.name} className="flex">
-                                            <div className="relative flex">
+                                        <Popover key={category.name} className="flex z-20">
+                                            <div className="relative flex z-20">
                                                 <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm  text-black font-semibold transition-colors duration-200 ease-out hover:text-yellow-600 data-[open]:border-[#2d2d2d] data-[open]:text-[#000000] data-[open]:font-semibold ">
                                                     {category.name}
                                                 </PopoverButton>
@@ -404,9 +404,9 @@ export default function Navigation() {
                                         </Popover>
                                     ))}
                                     {navigation2.categories.map((category) => (
-                                        <Popover key={category.name} className="flex">
-                                            <div className="relative flex">
-                                                <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm  text-black font-semibold transition-colors duration-200 ease-out hover:text-yellow-600 data-[open]:border-[#2d2d2d] data-[open]:text-[#000000] data-[open]:font-semibold ">
+                                        <Popover key={category.name} className="flex z-20">
+                                            <div className="relative flex z-20">
+                                                <PopoverButton className="relative z-20 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm  text-black font-semibold transition-colors duration-200 ease-out hover:text-yellow-600 data-[open]:border-[#2d2d2d] data-[open]:text-[#000000] data-[open]:font-semibold ">
                                                     {category.name}
                                                 </PopoverButton>
                                             </div>
