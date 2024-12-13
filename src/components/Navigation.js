@@ -14,8 +14,11 @@ import {
     TabList,
     TabPanel,
     TabPanels,
+
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+
+
 import { CiCircleChevRight } from "react-icons/ci";
 import { CiCircleChevLeft } from "react-icons/ci";
 import Link from 'next/link'
@@ -111,6 +114,7 @@ export default function Navigation() {
     const [open, setOpen] = useState(false)
 
 
+
     const visibleSlides = 2;
     let currentSlide = 0;  // Use `let` instead of `const` to allow reassignment
     const handleNext = () => {
@@ -145,6 +149,12 @@ export default function Navigation() {
         { name: 'BILLIARD', href: '#' },
         { name: 'CAFE', href: '#' },
     ]
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+    };
 
 
     return (
@@ -288,7 +298,7 @@ export default function Navigation() {
 
                         {/* Center Section: Logo */}
                         <div className="flex flex-grow justify-center lg:flex-none">
-                            <a href="/" className="flex">
+                            <a href="/" className="flex" >
                                 <span className="sr-only">Your Company</span>
                                 <img
                                     alt="Your Company Logo"
@@ -300,7 +310,10 @@ export default function Navigation() {
 
                         {/* Right Section: Search Icon */}
                         <div className="flex lg:flex-1 justify-end">
-                            <a href="#" className=" text-gray-400 hover:text-gray-500">
+                            <a href="#" className=" text-gray-400 hover:text-gray-500" onClick={(e) => {
+                                e.preventDefault();
+                                toggleModal();
+                            }}>
                                 <span className="sr-only">Search</span>
                                 <MagnifyingGlassIcon aria-hidden="true" className="h-6 w-6" />
                             </a>
@@ -470,6 +483,36 @@ export default function Navigation() {
                     </div>
                 </nav>
             </header>
+
+
+            {isOpen && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+                    onClick={toggleModal} // Close modal when clicking on the background
+                >
+                    {/* Content Container */}
+                    <div
+                        className="relative bg-transparent bg-opacity-75 backdrop-blur-md rounded-full p-4 w-11/12 max-w-md shadow-lg"
+                        onClick={(e) => e.stopPropagation()} // Prevent background click from closing modal
+                    >
+                        {/* Close Button */}
+                        <button
+                            onClick={toggleModal}
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                        >
+                            <span className="sr-only">Close</span>
+
+                        </button>
+
+                        {/* Input Field */}
+                        <input
+                            type="text"
+                            className="  w-full border border-transparent focus:border-indigo-500 bg-opacity-70 rounded-full p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            placeholder="Nhập tên dự án cần tìm.."
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
