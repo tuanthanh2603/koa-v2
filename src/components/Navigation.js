@@ -288,7 +288,7 @@ export default function Navigation() {
 
                         {/* Center Section: Logo */}
                         <div className="flex flex-grow justify-center lg:flex-none">
-                            <a href="#" className="flex">
+                            <a href="/" className="flex">
                                 <span className="sr-only">Your Company</span>
                                 <img
                                     alt="Your Company Logo"

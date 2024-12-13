@@ -4,37 +4,37 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 const products = [
     {
         id: 1,
-        name: 'Basic Tee',
+        name: 'DỰ ÁN 1',
         href: '#',
         imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
+        imageAlt: "IMAGE PROJECT",
         price: '$35',
         color: 'Black',
     },
     {
         id: 2,
-        name: 'Basic Tee',
+        name: 'DỰ ÁN 2',
         href: '#',
         imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
+        imageAlt: "IMAGE PROJECT",
         price: '$35',
         color: 'Black',
     },
     {
         id: 3,
-        name: 'Basic Tee',
+        name: 'DỰ ÁN 3',
         href: '#',
         imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
+        imageAlt: "IMAGE PROJECT",
         price: '$35',
         color: 'Black',
     },
     {
         id: 4,
-        name: 'Basic Tee',
+        name: 'DỰ ÁN 4',
         href: '#',
         imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
+        imageAlt: "IMAGE PROJECT",
         price: '$35',
         color: 'Black',
     },
@@ -81,7 +81,7 @@ export default function Home() {
                                         </a>
                                     </div>
                                 </div>
-                                <p className="mt-1 text-lg font-semibold text-gray-900 text-center">{product.price}</p>
+                                <p className="mt-1 text-lg font-semibold text-gray-900 text-center">{product.name}</p>
                             </a>
                         ))}
                     </div>
