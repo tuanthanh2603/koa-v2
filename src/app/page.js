@@ -183,14 +183,14 @@ export default function Home() {
 				<div className="absolute inset-0 bg-black/60"></div>
 				<div className="relative z-10 text-center">
 					<Image
-						src="/static/logo-koa-2.png"
+						src="/static/logo-koa-4.png"
 						alt="KOA Studio Logo"
-						width={200}
+						width={500}
 						height={120}
 						className="mx-auto"
 					/>
-					<h1 className="text-4xl md:text-5xl font-bold text-white mt-4 font-serif">
-						KOA Studio
+					<h1 className="text-4xl md:text-5xl text-white font-montserrat">
+						Kiến trúc KOA
 					</h1>
 					<p className="text-lg text-white mt-2 font-light">
 						Kiến Tạo Không Gian - Nâng Tầm Cuộc Sống

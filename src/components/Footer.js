@@ -4,14 +4,14 @@ const Footer = () => {
 		<footer className="bg-gray-800 py-12 text-gray-300">
 			<div className="container mx-auto px-4 text-center">
 				<Image
-					src="/static/logo-koa-2.png"
+					src="/static/logo-koa-4.png"
 					alt="KOA Studio Logo"
-					width={150}
+					width={300}
 					height={90}
 					className="mx-auto mb-4"
 				/>
 				<p className="mb-4">
-					KOA Studio - Kiến Tạo Không Gian, Nâng Tầm Cuộc Sống
+					Kiến trúc KOA - Kiến Tạo Không Gian, Nâng Tầm Cuộc Sống
 				</p>
 				<p>
 					© {new Date().getFullYear()} KOA Studio. All rights
