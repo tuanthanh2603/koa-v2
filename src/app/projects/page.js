@@ -1,5 +1,4 @@
 "use client";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import { useState } from "react";
 
 const products = [
@@ -176,15 +175,6 @@ export default function Home() {
 
 	return (
 		<div className="bg-black text-white min-h-screen">
-			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
-				<Breadcrumbs
-					items={[
-						{ label: "Trang chủ", href: "/" },
-						{ label: "Dự án" },
-					]}
-				/>
-			</div>
-
 			<section className="relative">
 				<div className="absolute inset-0">
 					<img
@@ -213,16 +203,18 @@ export default function Home() {
 
 			<section
 				id="projects"
-				className="py-8">
+				className="py-8 bg-white">
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold mb-6">Bộ lọc dự án</h2>
+					<h2 className="text-3xl font-bold mb-6 text-black">
+						Bộ lọc dự án
+					</h2>
 					<div className="flex flex-wrap gap-4 justify-center sm:justify-start">
 						<button
 							onClick={() => setSelectedCategory(null)}
 							className={`px-4 py-2 rounded-md text-sm font-semibold transition duration-200 ${
 								selectedCategory === null
-									? "bg-white text-black"
-									: "bg-gray-700 text-white hover:bg-gray-600"
+									? "bg-black text-white"
+									: "bg-gray-200 text-black hover:bg-gray-300"
 							}`}>
 							Tất cả
 						</button>
@@ -232,8 +224,8 @@ export default function Home() {
 								onClick={() => setSelectedCategory(category)}
 								className={`px-4 py-2 rounded-md text-sm font-semibold transition duration-200 ${
 									selectedCategory === category
-										? "bg-white text-black"
-										: "bg-gray-700 text-white hover:bg-gray-600"
+										? "bg-black text-white"
+										: "bg-gray-200 text-black hover:bg-gray-300"
 								}`}>
 								{category}
 							</button>
@@ -242,7 +234,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+			<div className="px-4 sm:px-6 lg:px-8 py-16 bg-white">
 				<div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
 					{currentProducts.map((product) => (
 						<div
@@ -271,33 +263,11 @@ export default function Home() {
 									</a>
 								</div>
 							</div>
-							<p className="mt-4 text-base sm:text-lg font-semibold text-white">
+							<p className="mt-4 text-base sm:text-lg font-semibold text-black">
 								{product.name}
 							</p>
 						</div>
 					))}
-				</div>
-
-				<div className="flex justify-center mt-10">
-					{Array.from(
-						{
-							length: Math.ceil(
-								filteredProducts.length / productsPerPage
-							),
-						},
-						(_, i) => (
-							<button
-								key={i + 1}
-								onClick={() => paginate(i + 1)}
-								className={`mx-2 px-4 py-2 rounded-md text-sm font-semibold transition duration-200 ${
-									currentPage === i + 1
-										? "bg-white text-black"
-										: "bg-gray-700 text-white hover:bg-gray-600"
-								}`}>
-								{i + 1}
-							</button>
-						)
-					)}
 				</div>
 			</div>
 
