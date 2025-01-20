@@ -418,7 +418,7 @@ export default function Navigation() {
 					</div>
 				)}
 			</div>
-			<div className="bg-white border-b border-gray-200 sticky top-0 z-50">
+			<div className="bg-white border-b border-gray-200 sticky top-0 z-40">
 				<div className="flex h-16 items-center justify-center">
 					{/* Flyout menus */}
 					<PopoverGroup className="lg:ml-8 lg:block lg:self-stretch">
